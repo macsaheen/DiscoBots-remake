@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+* {
+    font-family: 'Barlow', sans-serif;
+}
+
+.location {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    background-image: url("assets/location.png");
+    background-size: cover;  /* Ensures the image fully covers the screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+
+
+nav {
+    background-color: #019A4A;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    padding: 0 15px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    top: 20vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.card {
+    display: flex;
+    gap: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #019A4A;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+.text {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+h2 {
+    color:#019A4A;
+}

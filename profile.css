@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+
+.profile {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    background-image: url("assets/client_info.png");
+    background-size: cover;
+    /* Ensures the image fully covers the screen */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: repeat;
+    /* Prevents tiling */
+    background-attachment: fixed;
+    /* Keeps the image fixed while scrolling */
+
+}
+
+h2 {
+    color: #019A4A
+}
+
+nav {
+    background-color: #019A4A;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    padding: 0 15px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+body.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    color: black;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.profile-card p,
+.profile-card h2 {
+    align-self: flex-start;
+}
+
+.booking-card {
+    text-align: left;
+}
+
+.booking-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.booking-card li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}

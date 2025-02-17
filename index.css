@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+.home {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    background-image: url("assets/home.png");
+    background-size: cover;  /* Ensures the image fully covers the screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    color: white;
+}
+
+.slogan {
+    font-size: 67px;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.5rem;
+    margin: 2.5rem;
+}
+
+.container {
+    display: flex;
+    padding: 5rem;
+}
+
+nav {
+    background-color: #019A4A;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    padding: 0 15px;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.custom-btn {
+    color: #019A4A; /* Green text */
+    background-color: white; /* White background */
+    border: 2px solid #019A4A; /* Green border */
+    padding: 20px;
+}
+
+.button-container {
+    padding: 15px;
+    background-color: white;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmation</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="confirm.css">
+</head>
+
+<body class="confirm">
+    <nav>
+        <ul>
+            <li><img src="assets/logo.png" alt="Disco bots logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2 class="text-center">Appointment Confirmation</h2>
+            <div id="confirmation-details">
+                <p><strong>Date:</strong> <span id="confirm-date"></span></p>
+                <p><strong>Time:</strong> <span id="confirm-time"></span></p>
+                <p><strong>Child's Full Name:</strong> <span id="confirm-child"></span></p>
+                <p><strong>Parent's Full Name:</strong> <span id="confirm-parent"></span></p>
+                <p><strong>Phone Number:</strong> <span id="confirm-phone"></span></p>
+                <p><strong>Additional Notes:</strong> <span id="confirm-notes"></span></p>
+            </div>
+            <div class="text-center">
+                <a href="index.html" class="btn btn-success">Back to the Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let appointmentData = JSON.parse(sessionStorage.getItem("appointmentData"));
+
+            if (appointmentData) {
+                document.getElementById("confirm-date").textContent = appointmentData.date;
+                document.getElementById("confirm-time").textContent = appointmentData.time;
+                document.getElementById("confirm-child").textContent = appointmentData.childName;
+                document.getElementById("confirm-parent").textContent = appointmentData.parentName;
+                document.getElementById("confirm-phone").textContent = appointmentData.phone;
+                document.getElementById("confirm-notes").textContent = appointmentData.notes;
+            } else {
+                document.getElementById("confirmation-details").innerHTML = "<p class='text-center'>No appointment found.</p>";
+            }
+        });
+    </script>
+</body>
+
+</html>

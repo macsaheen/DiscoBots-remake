@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Discobots</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="profile">
+    <nav>
+        <ul>
+            <li><img src="assets/logo.png" alt="Disco bots logo"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- Profile Information Card -->
+        <div class="card profile-card">
+            <img src="assets/logo.png" alt="Profile Picture" class="profile-pic">
+            <h2 id="profile-name">John Doe</h2>
+            <p><strong>Joined:</strong> <span id="profile-joined">January 2024</span></p>
+            <p><strong>Phone:</strong> <span id="profile-phone">(123) 456-7890</span></p>
+            <p><strong>Email:</strong> <span id="profile-email">johndoe@example.com</span></p>
+        </div>
+        
+        <!-- Booking Information Card -->
+        <div class="card booking-card">
+            <h2>My Bookings</h2>
+            <ul id="booking-list">
+                <li><strong>Service:</strong> Robotics Workshop</li>
+                <li><strong>Date:</strong> March 10, 2025</li>
+                <li><strong>Time:</strong> 4:00 PM</li>
+                <li><strong>Status:</strong> Confirmed</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let profileData = JSON.parse(sessionStorage.getItem("profileData"));
+            let bookingData = JSON.parse(sessionStorage.getItem("bookingData"));
+
+            if (profileData) {
+                document.getElementById("profile-name").textContent = profileData.name;
+                document.getElementById("profile-joined").textContent = profileData.joined;
+                document.getElementById("profile-phone").textContent = profileData.phone;
+                document.getElementById("profile-email").textContent = profileData.email;
+            }
+
+            if (bookingData) {
+                let bookingList = document.getElementById("booking-list");
+                bookingList.innerHTML = "";
+                bookingData.forEach(booking => {
+                    let li = document.createElement("li");
+                    li.innerHTML = `<strong>Service:</strong> ${booking.service} <br>
+                                    <strong>Date:</strong> ${booking.date} <br>
+                                    <strong>Time:</strong> ${booking.time} <br>
+                                    <strong>Status:</strong> ${booking.status}`;
+                    bookingList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
